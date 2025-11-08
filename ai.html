@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="hero container">
+            <h1>Boost Sales with AI Chatbots That Never Sleep</h1>
+            <p>Harness the power of artificial intelligence to provide instant, 24/7 customer support while reducing operational costs.</p>
+            <div class="button-container">
+                <a href="#" class="btn btn-primary">
+                    Get Started
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+                <button class="btn btn-outline" onclick="openCalendly()">
+                    Book a Demo
+                </button>
+            </div>
+        </section>
+
+        <!-- Tabs Section -->
+        <section class="container">
+            <div class="tabs" id="tabs">
+                <button class="tab-button active" data-tab="overview">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+        <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+        <path d="M15 13a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"/>
+        <path d="M11 13a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"/>
+    </svg>
+    Overview
+</button>
+                <button class="tab-button" data-tab="features">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-10 20 10-7 10 7z"></path></svg>
+                    Features
+                </button>
+                <button class="tab-button" data-tab="process">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path d="M5.83 19A10 10 0 0 1 12 2v0a10 10 0 0 1 9.2 13.5"></path><path d="M12 18V22"></path></svg>
+                    Process
+                </button>
+                <button class="tab-button" data-tab="usecases">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Use Cases
+                </button>
+                <button class="tab-button" data-tab="integrations">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3a2 2 0 0 0-2 2"></path><path d="M19 3a2 2 0 0 1 2 2"></path><path d="M21 19a2 2 0 0 1-2 2"></path><path d="M5 21a2 2 0 0 1-2-2"></path><path d="M9 3h1"></path><path d="M9 21h1"></path><path d="M14 3h1"></path><path d="M14 21h1"></path><path d="M3 9v1"></path><path d="M21 9v1"></path><path d="M3 14v1"></path><path d="M21 14v1"></path></svg>
+                    Integrations
+                </button>
+                <button class="tab-button" data-tab="pricing">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                    Pricing
+                </button>
+                <button class="tab-button" data-tab="faq">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+                    FAQ
+                </button>
+            </div>
+
+            <div class="tab-contents">
+                <!-- Overview Tab -->
+                <div id="overview" class="tab-content active">
+                    <div class="card">
+                        <h2>What is an AI Chatbot?</h2>
+                        <p class="text-gray-400">
+                            An AI chatbot is a sophisticated software application designed to simulate human-like conversations with users. It leverages artificial intelligence to understand and respond to customer inquiries in real time, providing instant assistance and enhancing the overall user experience.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3">
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <h3>24/7 Customer Support</h3>
+                            <p class="text-gray-400">AI chatbots offer round-the-clock support, ensuring your customers get instant help anytime, anywhere.</p>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-10 20 10-7 10 7z"></path></svg>
+                            </div>
+                            <h3>Enhanced Efficiency</h3>
+                            <p class="text-gray-400">By automating repetitive and time-consuming tasks, chatbots free up your team to focus on high-impact strategies.</p>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3>Personalized Interactions</h3>
+                            <p class="text-gray-400">Tailored responses and intelligent suggestions help improve customer satisfaction and drive loyalty.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>What Sets Our Chatbots Apart</h3>
+                        <ul class="bullet-list">
+                            <li>Customizable Solutions: We build chatbots specifically designed for your business needs, industry, and customer base.</li>
+                            <li>Seamless Automation: Our chatbots integrate effortlessly with your existing tools and workflows.</li>
+                            <li>Commitment to Innovation: We're always enhancing our AI tools to keep your business ahead of the curve.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Features Tab -->
+                <div id="features" class="tab-content">
+                    <div class="grid grid-cols-2">
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <h3>24/7 Customer Support</h3>
+                            <p class="text-gray-400">Instant answers to common questions and handles inquiries about orders, shipping, and website navigation.</p>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                            </div>
+                            <h3>Product Assistance</h3>
+                            <p class="text-gray-400">Personalized product recommendations and highlights top sellers and categories.</p>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                            </div>
+                            <h3>Order Tracking</h3>
+                            <p class="text-gray-400">Real-time tracking by order number with direct links to customer orders for full transparency.</p>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg>
+                            </div>
+                            <h3>Refunds & Returns</h3>
+                            <p class="text-gray-400">Secure customer verification and guided form to request returns and submit refund requests.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="feature-icon">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.5V14a2 2 0 0 1-2 2h-7.5"></path><path d="M2 8.5h7.5"></path><path d="M2 12h5.5"></path><path d="M2 15.5h4"></path><path d="M15.5 14a.5.5 0 0 0 0-1h-2a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h2a.5.5 0 0 0 0-1h-2a1.5 1.5 0 0 0-1.5 1.5v1a1.5 1.5 0 0 0 1.5 1.5h2Z"></path><rect width="3" height="6" x="13" y="5" rx="1.5"></rect></svg>
+                        </div>
+                        <h3>Smart Contact Form</h3>
+                        <p class="text-gray-400">Easy access to support or feedback submission within the chatbot interface.</p>
+                    </div>
+                </div>
+
+                <!-- Process Tab -->
+                <div id="process" class="tab-content">
+                    <div class="process-timeline">
+                        <div class="card process-card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
+                            </div>
+                            <h3>Consultation</h3>
+                            <p class="text-gray-400">Understanding your goals and customer base</p>
+                        </div>
+                        <div class="card process-card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                            </div>
+                            <h3>Data Collection</h3>
+                            <p class="text-gray-400">Gathering documents, product info, and FAQs</p>
+                        </div>
+                        <div class="card process-card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"></path><path d="M22 21H7"></path><path d="m5 11 9 9"></path></svg>
+                            </div>
+                            <h3>Bot Design</h3>
+                            <p class="text-gray-400">Customizing tone, personality, and user flows</p>
+                        </div>
+                        <div class="card process-card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <h3>Development</h3>
+                            <p class="text-gray-400">Coding logic and integrating AI models</p>
+                        </div>
+                        <div class="card process-card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 13l-2 2 2 2"></path><path d="m15 13 2 2-2 2"></path><line x1="12" y1="17" x2="12" y2="11"></line></svg>
+                            </div>
+                            <h3>Training & Testing</h3>
+                            <p class="text-gray-400">Ensuring performance through real use case testing</p>
+                        </div>
+                        <div class="card process-card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.7 2.84"></path><path d="M9 17h6"></path><path d="M9 12h6"></path><path d="M13 8h2"></path><line x1="22" x2="18" y1="8" y2="12"></line><line x1="18" x2="22" y1="12" y2="16"></line></svg>
+                            </div>
+                            <h3>Deployment</h3>
+                            <p class="text-gray-400">Launching the chatbot on selected platforms</p>
+                        </div>
+                        <div class="card process-card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            </div>
+                            <h3>Monitoring & Optimization</h3>
+                            <p class="text-gray-400">Ongoing support, analysis, and updates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Cases Tab -->
+                <div id="usecases" class="tab-content">
+                    <div class="grid grid-cols-2">
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            </div>
+                            <h3>E-commerce</h3>
+                            <p class="text-gray-400">Product suggestions, order tracking, and refund processing with seamless integration into your online store.</p>
+                            <ul class="feature-list">
+                                <li>Automated product recommendations</li>
+                                <li>Real-time order status updates</li>
+                                <li>Instant refund request processing</li>
+                                <li>Shopping cart assistance</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2H3v16h5v4l4-4h5l4-4V2z"></path><path d="M10 9a1 1 0 1 0 2 0 1 1 0 1 0-2 0"></path><path d="M14 9a1 1 0 1 0 2 0 1 1 0 1 0-2 0"></path><path d="M6 9a1 1 0 1 0 2 0 1 1 0 1 0-2 0"></path></svg>
+                            </div>
+                            <h3>Customer Service</h3>
+                            <p class="text-gray-400">Answer FAQs, reduce wait times, and assist in problem resolution efficiently.</p>
+                            <ul class="feature-list">
+                                <li>Instant response to common queries</li>
+                                <li>Ticket creation and tracking</li>
+                                <li>Automated issue escalation</li>
+                                <li>Multi-language support</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            </div>
+                            <h3>Seasonal Interaction</h3>
+                            <p class="text-gray-400">Send personalized holiday greetings and manage seasonal campaigns effectively.</p>
+                            <ul class="feature-list">
+                                <li>Automated holiday messages</li>
+                                <li>Promotional campaign management</li>
+                                <li>Seasonal offer notifications</li>
+                                <li>Event reminders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrations Tab -->
+                <div id="integrations" class="tab-content">
+                    <div class="grid grid-cols-2">
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            </div>
+                            <h3>E-commerce Platforms</h3>
+                            <ul class="feature-list">
+                                <li>Shopify</li>
+                                <li>WooCommerce</li>
+                                <li>Magento</li>
+                                <li>BigCommerce</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <h3>Messaging Platforms</h3>
+                            <ul class="feature-list">
+                                <li>Discord</li>
+                                <li>WhatsApp</li>
+                                <li>Telegram</li>
+                                <li>Facebook Messenger</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><rect x="4" y="8" width="16" height="8"></rect></svg>
+                            </div>
+                            <h3>Website Builders</h3>
+                            <ul class="feature-list">
+                                <li>Webflow</li>
+                                <li>Wix</li>
+                                <li>WordPress</li>
+                                <li>Squarespace</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="feature-icon">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" x2="6" y1="2" y2="4"></line><line x1="10" x2="10" y1="2" y2="4"></line><line x1="14" x2="14" y1="2" y2="4"></line></svg>
+                            </div>
+                            <h3>CRM Tools</h3>
+                            <ul class="feature-list">
+                                <li>Salesforce</li>
+                                <li>HubSpot</li>
+                                <li>Zoho</li>
+                                <li>Pipedrive</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="feature-icon" style="margin: 0 auto 1rem auto;">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <h3>Custom Integration</h3>
+                        <p class="text-gray-400">Don't see your platform? We'll create a custom integration tailored to your needs.</p>
+                    </div>
+                </div>
+
+                <!-- Pricing Tab -->
+                <div id="pricing" class="tab-content">
+                    <div class="grid grid-cols-3">
+                        <div class="pricing-card">
+                            <h3>Starter</h3>
+                            <div class="price">99€</div>
+                            <p class="text-gray-400">Perfect for small businesses just getting started</p>
+                            <ul class="feature-list">
+                                <li>Basic chatbot functionality</li>
+                                <li>Up to 1,000 conversations/month</li>
+                                <li>Email support</li>
+                                <li>Basic analytics</li>
+                                <li>2 integration platforms</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-full">
+                                Get Started
+                            </a>
+                        </div>
+                        <div class="pricing-card featured">
+                            <div class="featured-tag">Popular</div>
+                            <h3>Professional</h3>
+                            <div class="price">149€</div>
+                            <p class="text-gray-400">Ideal for growing businesses with moderate traffic</p>
+                            <ul class="feature-list">
+                                <li>Advanced AI capabilities</li>
+                                <li>Up to 10,000 conversations/month</li>
+                                <li>Priority support</li>
+                                <li>Advanced analytics & reporting</li>
+                                <li>All integration platforms</li>
+                                <li>Custom workflows</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-full">
+                                Get Started
+                            </a>
+                        </div>
+                        <div class="pricing-card">
+                            <h3>Enterprise</h3>
+                            <div class="price">Custom</div>
+                            <p class="text-gray-400">For large organizations with specific needs</p>
+                            <ul class="feature-list">
+                                <li>Unlimited conversations</li>
+                                <li>24/7 dedicated support</li>
+                                <li>Custom AI model training</li>
+                                <li>Advanced security features</li>
+                                <li>Custom integrations</li>
+                                <li>SLA guarantee</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-full">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Tab -->
+                <div id="faq" class="tab-content">
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can the chatbot handle multiple languages?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="faq-answer">
+                                Yes, our AI chatbots support multiple languages, allowing you to reach a global audience with ease. We can configure the chatbot to automatically detect and respond in the user's preferred language.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How secure is the chatbot with customer data?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="faq-answer">
+                                We take data security seriously. Our chatbots are built with enterprise-grade security features including end-to-end encryption, secure data storage, and compliance with GDPR and other privacy regulations. All sensitive information is handled according to industry best practices.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Is there ongoing support and maintenance?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="faq-answer">
+                                Yes. We host the chatbot and provide ongoing monthly reports, bug fixes, and proactive updates. We can also enable features like automated holiday greetings or promotional messages each time your shop runs a campaign.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>What is the implementation timeline for the chatbot?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="faq-answer">
+                                Typical implementation takes 2 to 8 weeks, depending on the scope and complexity of the project. This includes consultation, development, training, and testing phases to ensure optimal performance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2>Let AI power your customer experience</h2>
+                <div class="button-container">
+                    <a href="#" class="btn btn-primary">
+                        Get Started
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                    <button class="btn btn-outline" onclick="openCalendly()">
+                        Book a Demo
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
