@@ -1,4 +1,88 @@
+async function loadNavbar() {
+  try {
+    const response = await fetch('navbar.html');
+    const navbarHTML = await response.text();
+    const navbarContainer = document.createElement('div');
+    navbarContainer.innerHTML = navbarHTML;
+    document.body.insertBefore(navbarContainer, document.body.firstChild);
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileClose = document.getElementById('mobileClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('active');
+      mobileOverlay.classList.add('active');
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('active');
+      mobileOverlay.classList.remove('active');
+    }
+
+    mobileToggle.addEventListener('click', openMobileMenu);
+    mobileClose.addEventListener('click', closeMobileMenu);
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+
+    const header = document.getElementById('header');
+    let lastScrollY = 0;
+    let showHeader = true;
+
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        if (showHeader) {
+          header.classList.add('hidden');
+          showHeader = false;
+        }
+      } else {
+        if (!showHeader) {
+          header.classList.remove('hidden');
+          showHeader = true;
+        }
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-link');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  } catch (error) {
+    console.error('Error loading navbar:', error);
+  }
+}
+
+async function loadFooter() {
+  try {
+    const response = await fetch('footer.html');
+    const footerHTML = await response.text();
+    const footerContainer = document.createElement('div');
+    footerContainer.innerHTML = footerHTML;
+    document.body.appendChild(footerContainer);
+
+    const footer = document.querySelector('.atlantex-footer');
+    if (footer) {
+      footer.style.opacity = '0';
+      footer.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => {
+        footer.style.opacity = '1';
+      }, 100);
+    }
+  } catch (error) {
+    console.error('Error loading footer:', error);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  loadNavbar();
+  loadFooter();
+
   const tabs = document.querySelectorAll('.tab-button');
   const tabContents = document.querySelectorAll('.tab-content');
 
