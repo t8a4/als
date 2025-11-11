@@ -156,3 +156,151 @@ const observer = new IntersectionObserver((entries) => {
 animatedElements.forEach(element => {
   observer.observe(element);
 });
+
+// Initialize Lucide icons
+lucide.createIcons();
+
+// Tab functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs2 = document.querySelectorAll('.tab-button2');
+    const tabContents2 = document.querySelectorAll('.tab-content2');
+    const tabsNav2 = document.querySelector('.tabs-nav2');
+    const scrollLeftBtn2 = document.getElementById('scrollLeft2');
+    const scrollRightBtn2 = document.getElementById('scrollRight2');
+
+    // Tab switching
+    tabs2.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabId = tab.getAttribute('data-tab2');
+
+            // Remove active class from all tabs and contents
+            tabs2.forEach(t => t.classList.remove('active'));
+            tabContents2.forEach(c => c.classList.remove('active'));
+
+            // Add active class to clicked tab and corresponding content
+            tab.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+
+    // Scroll functionality
+    function updateScrollButtons2() {
+        const isScrollable = tabsNav2.scrollWidth > tabsNav2.clientWidth;
+        const isAtStart = tabsNav2.scrollLeft <= 0;
+        const isAtEnd = tabsNav2.scrollLeft >= tabsNav2.scrollWidth - tabsNav2.clientWidth;
+
+        scrollLeftBtn2.classList.toggle('visible', isScrollable && !isAtStart);
+        scrollRightBtn2.classList.toggle('visible', isScrollable && !isAtEnd);
+    }
+
+    // Scroll buttons click handlers
+    scrollLeftBtn2.addEventListener('click', () => {
+        tabsNav2.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    scrollRightBtn2.addEventListener('click', () => {
+        tabsNav2.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+
+    // Update scroll buttons visibility
+    tabsNav2.addEventListener('scroll', updateScrollButtons2);
+    window.addEventListener('resize', updateScrollButtons2);
+
+    // Initial check for scroll buttons
+    updateScrollButtons2();
+
+    // Scroll active tab into view on load (horizontal only)
+    const activeTab2 = document.querySelector('.tab-button2.active');
+    if (activeTab2) {
+        setTimeout(() => {
+            const tabsNav2 = document.querySelector('.tabs-nav2');
+            const tabLeft = activeTab2.offsetLeft;
+            const tabWidth = activeTab2.offsetWidth;
+            const tabsWidth = tabsNav2.offsetWidth;
+
+            tabsNav2.scrollTo({
+                left: tabLeft - (tabsWidth / 2) + (tabWidth / 2),
+                behavior: 'smooth'
+            });
+        }, 100);
+    }
+
+    // Add scroll animation for feature cards
+    const cards2 = document.querySelectorAll('.feature-card2');
+
+    function checkScroll2() {
+        cards2.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const triggerBottom = window.innerHeight * 0.8;
+
+            if (cardTop < triggerBottom) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    // Set initial state
+    cards2.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.5s ease';
+    });
+
+    // Check scroll position
+    window.addEventListener('scroll', checkScroll2);
+    checkScroll2(); // Initial check
+});
+
+// Calendly integration
+function openCalendly2() {
+    Calendly.initPopupWidget({
+        url: 'https://calendly.com/asenlyubomirov35/30min?hide_gdpr_banner=1&background_color=1a1333&text_color=ffffff&primary_color=9333ea'
+    });
+}
+
+// About page specific functionality
+function initAboutPage() {
+    // Only run if we're on the about page
+    if (document.querySelector('.container4')) {
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Intersection Observer for fade-in4 animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in4 class
+        document.querySelectorAll('.fade-in4').forEach(element => {
+            observer.observe(element);
+        });
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initAboutPage();
+});
+
+// Legal Pages Common JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the content element (works for both terms and privacy pages)
+    const contentElement = document.getElementById('termsContent') || document.getElementById('privacyContent');
+
+    if (contentElement) {
+        // Trigger the animation after a short delay to ensure the element is rendered
+        setTimeout(() => {
+            contentElement.classList.add('animated');
+        }, 50);
+    }
+});
