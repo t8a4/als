@@ -165,8 +165,11 @@
     const errorSound = document.getElementById('errorSound');
 
     window.addEventListener('load', () => {
-      errorSound.play().catch(() => {});
-    });
+  document.body.addEventListener('click', () => {
+    errorSound.play();
+  }, { once: true });
+});
+
 
     function updateProgress() {
       if (progress < 100) {
