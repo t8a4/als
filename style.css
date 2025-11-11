@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo{
-  height: 50px;
+  height: 75px;
   width: auto;
 }
 
@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
   .pricing-card.featured {
     transform: none;
     margin-top: calc(4 * var(--spacing-base));
-    margin-bottom: calc(4 * var(--spacing-base));
+    margin-bottom: calc(5 * var(--spacing-base));
   }
 }
 
