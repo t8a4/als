@@ -442,7 +442,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .pricing-card.featured {
-    margin-top: calc(3 * var(--spacing-base));
+    margin-top: calc(2 * var(--spacing-base));
   }
 }
 
