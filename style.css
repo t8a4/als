@@ -438,7 +438,11 @@ h1, h2, h3, h4, h5, h6 {
   .pricing-card.featured {
     transform: none;
     margin-top: calc(4 * var(--spacing-base));
-    margin-bottom: calc(5 * var(--spacing-base));
+    margin-bottom: calc(4 * var(--spacing-base));
+  }
+
+  .pricing-card.featured {
+    margin-top: calc(3 * var(--spacing-base));
   }
 }
 
