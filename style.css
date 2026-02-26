@@ -1599,3 +1599,104 @@ p {
     margin-bottom: 0.5rem;
     color: #e5e5e5; /* Match your paragraph text color */
 }
+
+/* ===== LANGUAGE DROPDOWN (FIXED NAVBAR) ===== */
+
+.lang-dropdown {
+  position: relative;
+}
+
+/* MAIN BOX (EN always visible) */
+.lang-box {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  width: 80px;
+}
+
+/* EN row */
+.lang-current {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Arrow */
+.lang-arrow {
+  transition: transform 0.25s ease;
+}
+
+/* DROPDOWN PANEL (ABSOLUTE → does NOT move navbar) */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-top: none;
+  background: #1A1333;
+  border-radius: 0 0 6px 6px;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-5px);
+
+  transition:
+    max-height 0.25s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+  z-index: 999;
+}
+
+/* OPTIONS */
+.lang-option {
+  display: block;
+  padding: 10px 12px;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.lang-option:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+/* EXPAND DOWN */
+.lang-box:hover .lang-options {
+  max-height: 100px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Rotate arrow */
+.lang-box:hover .lang-arrow {
+  transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+  .header .lang-dropdown {
+    display: none;
+  }
+}
+.mobile-lang-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-menu .lang-dropdown {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+}
