@@ -5,6 +5,49 @@ async function loadNavbar() {
     const navbarContainer = document.createElement('div');
     navbarContainer.innerHTML = navbarHTML;
     document.body.insertBefore(navbarContainer, document.body.firstChild);
+	
+	// ===== AUTO ACTIVE NAV =====
+	const currentPath = window.location.pathname.replace(/\/$/, "");
+
+	const navLinks = document.querySelectorAll(".nav-link[data-path]");
+
+	navLinks.forEach(link => {
+	  const linkPath = link.getAttribute("data-path").replace(/\/$/, "");
+
+	  if (linkPath === currentPath) {
+		link.classList.add("active");
+	  } else {
+		link.classList.remove("active");
+	  }
+	});
+	
+	// ===== LANGUAGE SWITCH =====
+const langOptions = document.querySelectorAll(".lang-option");
+
+langOptions.forEach(option => {
+  option.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const selectedLang = this.getAttribute("data-lang");
+    const currentPath = window.location.pathname;
+
+    let newPath = currentPath;
+
+    const isBG = currentPath.startsWith("/bg");
+
+    if (selectedLang === "bg" && !isBG) {
+      // add /bg
+      newPath = "/bg" + (currentPath === "/" ? "/" : currentPath);
+    }
+
+    if (selectedLang === "en" && isBG) {
+      // remove /bg
+      newPath = currentPath.replace(/^\/bg/, "") || "/";
+    }
+
+    window.location.href = newPath;
+  });
+});
 
     const mobileToggle = document.getElementById('mobileToggle');
     const mobileClose = document.getElementById('mobileClose');
