@@ -35,14 +35,14 @@ langOptions.forEach(option => {
 
     const isBG = currentPath.startsWith("/bg");
 
-    if (selectedLang === "bg" && !isBG) {
-      // add /bg
-      newPath = "/bg" + (currentPath === "/" ? "/" : currentPath);
+    // BG -> EN
+    if (selectedLang === "en" && isBG) {
+      newPath = currentPath.replace(/^\/bg/, "") || "/";
     }
 
-    if (selectedLang === "en" && isBG) {
-      // remove /bg
-      newPath = currentPath.replace(/^\/bg/, "") || "/";
+    // EN -> BG
+    if (selectedLang === "bg" && !isBG) {
+      newPath = "/bg" + (currentPath === "/" ? "/" : currentPath);
     }
 
     window.location.href = newPath;
