@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alstrategy - Начало</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/x-icon" href="http://alstrategize.eu/favicon.ico">
+</head>
+<body>
+    <!-- Attention Section (Hero) -->
+    <section class="hero2">
+        <div class="hero-content2">
+            <h1>Развийте бизнеса си в дигитална посока</h1>
+            <p>Създаваме AI решения, модерни уебсайтове, персонализиран софтуер и дигитални стратегии, които помагат на бизнеса ви да расте.</p>
+            <div class="btn-group2">
+                <a href="/contact" class="btn btn-primary">
+                    Започнете проект
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <button class="btn btn-outline" onclick="openCalendly2()">
+                    Запазете консултация
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interest Section -->
+    <section class="interest2">
+        <h2>Защо дигиталната трансформация е важна</h2>
+        <p>Днес бизнесите, които се адаптират бързо, печелят предимство. Ние ви помагаме да използвате модерни технологии, за да автоматизирате процеси, да подобрите обслужването и да привличате повече клиенти.</p>
+
+        <div class="services-grid2">
+            <div class="service-card2">
+                <div class="service-icon2">
+                    <i data-lucide="bot"></i>
+                </div>
+                <h3>AI решения</h3>
+                <p>Автоматизирайте процеси и подобрете клиентското изживяване с интелигентни AI решения.</p>
+            </div>
+
+            <div class="service-card2">
+                <div class="service-icon2">
+                    <i data-lucide="globe"></i>
+                </div>
+                <h3>Уеб разработка</h3>
+                <p>Модерни, бързи и професионални уебсайтове, създадени да превръщат посетителите в клиенти.</p>
+            </div>
+
+            <div class="service-card2">
+                <div class="service-icon2">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <h3>Дигитален маркетинг</h3>
+                <p>Стратегии, базирани на данни, които увеличават онлайн присъствието ви и привличат повече клиенти.</p>
+            </div>
+
+            <div class="service-card2">
+                <div class="service-icon2">
+                    <i data-lucide="message-square"></i>
+                </div>
+                <h3>Персонализирани приложения</h3>
+                <p>От мобилни приложения до бизнес системи — разработваме софтуер, който се адаптира към вашите нужди.</p>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-outline" onclick="document.querySelector('.tabs-section2').scrollIntoView({ behavior: 'smooth' })">
+                Вижте как можем да помогнем
+                <i data-lucide="arrow-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Solutions Section (Tabs) -->
+    <section class="tabs-section2">
+        <div class="tabs-container2">
+            <div class="tabs-nav-wrapper2">
+                <button class="scroll-button2" id="scrollLeft2">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <div class="tabs-nav2">
+                    <button class="tab-button2 active" data-tab2="explore2"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search w-10 h-10 text-primary mb-4"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                        Намерете решение</button>
+                    <button class="tab-button2" data-tab2="support2"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-8 h-8 text-primary"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+                        Автоматизирана поддръжка</button>
+                    <button class="tab-button2" data-tab2="website2"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-8 h-8 text-primary"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                        Нов уебсайт</button>
+                    <button class="tab-button2" data-tab2="clients2"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-chart w-8 h-8 text-primary"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+                        Повече клиенти</button>
+                    <button class="tab-button2" data-tab2="communication2"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square w-8 h-8 text-primary"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        Персонализиран софтуер</button>
+                </div>
+                <button class="scroll-button2" id="scrollRight2">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="tab-content-wrapper2">
+                <div id="explore2" class="tab-content2 active">
+                    <div class="tab-content-inner2">
+                        <div class="tab-text2">
+                            <h2>Открийте правилното решение за вашия бизнес</h2>
+                            <p>Независимо дали имате нужда от по-добра клиентска поддръжка, нов уебсайт, повече запитвания или персонализиран софтуер — ще ви помогнем да изберете най-подходящия подход.</p>
+                            <div class="btn-group2">
+                                <a href="/contact" class="btn btn-primary">Започнете</a>
+                                <a href="/services" class="btn btn-outline">Научете повече</a>
+                            </div>
+                        </div>
+                        <div class="tab-image2">
+                            <img src="/assets/ALSTRATEGY-PFP.png" alt="Разгледайте нашите услуги">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="support2" class="tab-content2">
+                    <div class="tab-content-inner2">
+                        <div class="tab-text2">
+                            <h2>Клиентска поддръжка, която работи денонощно</h2>
+                            <p>AI чатботовете помагат на клиентите ви да получават бързи отговори по всяко време. Така спестявате време, намалявате натоварването на екипа и не изпускате важни запитвания.</p>
+                            <div class="btn-group2">
+                                <a href="/contact" class="btn btn-primary">Започнете</a>
+                                <a href="/ai" class="btn btn-outline">Научете повече</a>
+                            </div>
+                        </div>
+                        <div class="tab-image2">
+                            <img src="/assets/AI.jpg" alt="AI решения за поддръжка">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="website2" class="tab-content2">
+                    <div class="tab-content-inner2">
+                        <div class="tab-text2">
+                            <h2>Уебсайт, който изглежда добре и работи за вас</h2>
+                            <p>Вашият сайт не трябва просто да съществува — той трябва да представя бизнеса ви ясно, да изгражда доверие и да превръща посетителите в реални клиенти.</p>
+                            <div class="btn-group2">
+                                <a href="/contact" class="btn btn-primary">Започнете</a>
+                                <a href="/websites" class="btn btn-outline">Научете повече</a>
+                            </div>
+                        </div>
+                        <div class="tab-image2">
+                            <img src="/assets/websites.jpg" alt="Уеб разработка">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="clients2" class="tab-content2">
+                    <div class="tab-content-inner2">
+                        <div class="tab-text2">
+                            <h2>Повече клиенти с по-ясна стратегия</h2>
+                            <p>Помагаме ви да подобрите онлайн присъствието си, да достигнете до правилната аудитория и да превърнете интереса в реални запитвания и продажби.</p>
+                            <div class="btn-group2">
+                                <a href="/contact" class="btn btn-primary">Започнете</a>
+                                <a href="/marketing" class="btn btn-outline">Научете повече</a>
+                            </div>
+                        </div>
+                        <div class="tab-image2">
+                            <img src="/assets/marketing.jpg" alt="Маркетинг решения">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="communication2" class="tab-content2">
+                    <div class="tab-content-inner2">
+                        <div class="tab-text2">
+                           <h2>Софтуер, създаден според вашия начин на работа</h2>
+                            <p>Разработваме персонализирани приложения, вътрешни системи и платформи, които решават реални бизнес проблеми. От идея до стартиране — изграждаме решения, които могат да растат заедно с вас.</p>
+                            <div class="btn-group2">
+                                <a href="/contact" class="btn btn-primary">Започнете</a>
+                                <a href="/software-development" class="btn btn-outline">Научете повече</a>
+                            </div>
+                        </div>
+                        <div class="tab-image2">
+                            <img src="/assets/software-development.jpg" alt="Софтуерна разработка">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section - Minimal -->
+    <section class="benefits2 container">
+        <h2>Какви са предимствата</h2>
+
+        <div class="benefit-item2">
+            <i data-lucide="zap" class="benefit-icon2"></i>
+            <div class="benefit-content2">
+                <h3>Повече ефективност</h3>
+                <p>Автоматизирайте задачите, които отнемат време и ресурси, за да може екипът ви да се фокусира върху най-важното.</p>
+            </div>
+        </div>
+
+        <div class="benefit-item2">
+            <i data-lucide="smile" class="benefit-icon2"></i>
+            <div class="benefit-content2">
+                <h3>По-добро клиентско изживяване</h3>
+                <p>Предлагайте бързо, ясно и персонализирано обслужване, което създава доверие и връща клиентите отново.</p>
+            </div>
+        </div>
+
+        <div class="benefit-item2">
+            <i data-lucide="trending-up" class="benefit-icon2"></i>
+            <div class="benefit-content2">
+                <h3>Решения, които растат с вас</h3>
+                <p>Създаваме системи, които могат да се развиват заедно с бизнеса ви, без да ви ограничават в бъдеще.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desire Section (Why Choose Us) -->
+    <section class="desire2">
+        <h2>Защо да изберете нас</h2>
+        <div class="features-grid2">
+            <div class="feature-card2">
+                <div class="feature-icon2">
+                    <i data-lucide="star"></i>
+                </div>
+                <h3>Фокус върху резултата</h3>
+                <p>Не създаваме просто красиви решения — изграждаме дигитални инструменти, които помагат на бизнеса ви да постига реален напредък.</p>
+            </div>
+            <div class="feature-card2">
+                <div class="feature-icon2">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3>Модерни технологии</h3>
+                <p>Използваме съвременни инструменти и подходи, за да създаваме бързи, надеждни и конкурентни решения.</p>
+            </div>
+            <div class="feature-card2">
+                <div class="feature-icon2">
+                    <i data-lucide="users"></i>
+                </div>
+                <h3>Партньорски подход</h3>
+                <p>Работим заедно с вас, за да разберем целите, процесите и нуждите ви, преди да предложим решение.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Section (CTA) -->
+    <section class="cta2">
+        <h2>Готови ли сте да развиете бизнеса си?</h2>
+        <p>Нека създадем дигитално решение, което работи за вашите цели и може да расте заедно с вас.</p>
+        <div class="btn-group2">
+            <a href="/contact" class="btn btn-primary">
+                Започнете
+                <i data-lucide="arrow-right"></i>
+            </a>
+            <button class="btn btn-outline" onclick="openCalendly2()">
+                Запазете разговор
+            </button>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
