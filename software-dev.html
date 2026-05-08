@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Custom Software & App Development | Alstrategy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+
+<body>
+  <div class="min-h-screen" style="padding-top: 120px;">
+
+    <!-- Hero Section -->
+    <section class="hero container">
+      <h1>Turn Your Idea Into a Real App, System, or AI-Powered Tool</h1>
+      <p>
+        We help businesses, founders, and teams build custom software, AI chatbots,
+        automations, dashboards, and internal systems designed around their exact workflow.
+      </p>
+
+      <div class="button-container">
+        <a href="/contact" class="btn btn-primary">
+          Start Your Project
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <button class="btn btn-outline" onclick="openCalendly()">
+          Book a Free Consultation
+        </button>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="container">
+      <div class="tabs" id="tabs">
+
+        <button class="tab-button active" data-tab="overview">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
+            <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path>
+            <path d="M15 13a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"></path>
+            <path d="M11 13a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"></path>
+          </svg>
+          Overview
+        </button>
+
+        <button class="tab-button" data-tab="features">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="14" x="3" y="4" rx="2"></rect>
+            <path d="M8 20h8"></path>
+            <path d="M12 16v4"></path>
+          </svg>
+          What We Build
+        </button>
+
+        <button class="tab-button" data-tab="process">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3v18h18"></path>
+            <path d="m19 9-5 5-4-4-3 3"></path>
+          </svg>
+          Process
+        </button>
+
+        <button class="tab-button" data-tab="usecases">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+          </svg>
+          Use Cases
+        </button>
+
+        <button class="tab-button" data-tab="integrations">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22v-5"></path>
+            <path d="M9 8V2"></path>
+            <path d="M15 8V2"></path>
+            <path d="M18 8v5a6 6 0 0 1-12 0V8Z"></path>
+          </svg>
+          Integrations
+        </button>
+
+        <button class="tab-button" data-tab="pricing">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+            <line x1="2" x2="22" y1="10" y2="10"></line>
+          </svg>
+          Pricing
+        </button>
+
+        <button class="tab-button" data-tab="faq">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <path d="M12 17h.01"></path>
+          </svg>
+          FAQ
+        </button>
+
+      </div>
+
+      <div class="tab-contents">
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+
+          <div class="card">
+            <h2>Custom Software Built Around Your Idea</h2>
+            <p class="text-gray-400">
+              Whether you need an AI chatbot, internal business system, customer portal,
+              automation tool, dashboard, booking platform, or full web app, we help turn
+              your idea into a working product.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-3">
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 14c.2-1 .7-1.7 1.5-2.5A4.95 4.95 0 0 0 18 8A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                  <path d="M9 18h6"></path>
+                  <path d="M10 22h4"></path>
+                </svg>
+              </div>
+              <h3>From Idea to Product</h3>
+              <p class="text-gray-400">
+                We help shape your concept, define the features, and turn it into a clear
+                development plan.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 8V4H8"></path>
+                  <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                  <path d="M2 14h2"></path>
+                  <path d="M20 14h2"></path>
+                  <path d="M15 13v2"></path>
+                  <path d="M9 13v2"></path>
+                </svg>
+              </div>
+              <h3>AI-Powered Systems</h3>
+              <p class="text-gray-400">
+                Add AI chatbots, smart assistants, automation, data analysis, and intelligent
+                workflows to your business.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <h3>Built for Your Workflow</h3>
+              <p class="text-gray-400">
+                Your software is designed around how your business actually works, saving
+                time and reducing manual tasks.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="card">
+            <h3>What Makes Our Approach Different</h3>
+            <ul class="bullet-list">
+              <li>Custom-built solutions for your exact idea, business model, and users.</li>
+              <li>AI chatbot and automation features where they make sense.</li>
+              <li>Scalable systems that can grow with your business.</li>
+              <li>Clear communication from idea planning to launch.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Features Tab -->
+        <div id="features" class="tab-content">
+          <div class="grid grid-cols-2">
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 8V4H8"></path>
+                  <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                  <path d="M2 14h2"></path>
+                  <path d="M20 14h2"></path>
+                  <path d="M15 13v2"></path>
+                  <path d="M9 13v2"></path>
+                </svg>
+              </div>
+              <h3>AI Chatbots</h3>
+              <p class="text-gray-400">
+                Smart assistants for websites, customer support, lead generation, internal
+                help desks, and sales workflows.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="14" x="3" y="4" rx="2"></rect>
+                  <path d="M8 20h8"></path>
+                  <path d="M12 16v4"></path>
+                </svg>
+              </div>
+              <h3>Custom Web Apps</h3>
+              <p class="text-gray-400">
+                Client portals, booking systems, dashboards, admin panels, marketplaces,
+                and SaaS-style platforms.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                  <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+                  <path d="M11 7h4a2 2 0 0 1 2 2v4"></path>
+                  <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                </svg>
+              </div>
+              <h3>Business Automations</h3>
+              <p class="text-gray-400">
+                Automate repetitive work such as emails, reports, CRM updates, order handling,
+                document processing, and notifications.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18"></path>
+                  <path d="M7 16h2"></path>
+                  <path d="M11 12h2"></path>
+                  <path d="M15 8h2"></path>
+                </svg>
+              </div>
+              <h3>Dashboards & Internal Systems</h3>
+              <p class="text-gray-400">
+                Tools for teams, operations, inventory, project tracking, customer management,
+                analytics, and daily business processes.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </div>
+            <h3>Everything Can Be Tailored</h3>
+            <p class="text-gray-400">
+              We can build from scratch, improve an existing system, connect tools together,
+              or create an AI layer on top of your current workflow.
+            </p>
+          </div>
+        </div>
+
+        <!-- Process Tab -->
+        <div id="process" class="tab-content">
+          <div class="process-timeline">
+
+            <div class="card process-card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h3>Consultation</h3>
+              <p class="text-gray-400">We understand your idea, business goals, users, and current workflow.</p>
+            </div>
+
+            <div class="card process-card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11H5a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-4"></path>
+                  <path d="M9 7h6"></path>
+                  <path d="M9 3h6"></path>
+                  <path d="M12 3v8"></path>
+                </svg>
+              </div>
+              <h3>Planning</h3>
+              <p class="text-gray-400">We define features, user flows, integrations, priorities, and project scope.</p>
+            </div>
+
+            <div class="card process-card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+                </svg>
+              </div>
+              <h3>Design</h3>
+              <p class="text-gray-400">We create the structure, interface, and experience of the app or system.</p>
+            </div>
+
+            <div class="card process-card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Development</h3>
+              <p class="text-gray-400">We build the software, chatbot, automation, dashboard, or platform.</p>
+            </div>
+
+            <div class="card process-card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </div>
+              <h3>Testing</h3>
+              <p class="text-gray-400">We test real scenarios, fix issues, and improve usability before launch.</p>
+            </div>
+
+            <div class="card process-card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.5 16.5c-1.5 1.26-2 4-2 4s2.74-.5 4-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                  <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22 22 0 0 1-4 2z"></path>
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                </svg>
+              </div>
+              <h3>Launch</h3>
+              <p class="text-gray-400">We deploy the system and make it ready for real users.</p>
+            </div>
+
+            <div class="card process-card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.7 2.84"></path>
+                  <path d="M21 3v6h-6"></path>
+                </svg>
+              </div>
+              <h3>Support & Improvement</h3>
+              <p class="text-gray-400">We help maintain, improve, and expand your software over time.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Use Cases Tab -->
+        <div id="usecases" class="tab-content">
+          <div class="grid grid-cols-2">
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 14c.2-1 .7-1.7 1.5-2.5A4.95 4.95 0 0 0 18 8A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                  <path d="M9 18h6"></path>
+                  <path d="M10 22h4"></path>
+                </svg>
+              </div>
+              <h3>Startups & Founders</h3>
+              <p class="text-gray-400">Turn an idea into an MVP, prototype, web app, or AI-powered product.</p>
+              <ul class="feature-list">
+                <li>MVP development</li>
+                <li>AI-powered app ideas</li>
+                <li>Prototype to product</li>
+                <li>SaaS-style platforms</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                </svg>
+              </div>
+              <h3>Small Businesses</h3>
+              <p class="text-gray-400">Automate daily tasks, manage customers, improve communication, and reduce manual work.</p>
+              <ul class="feature-list">
+                <li>Admin dashboards</li>
+                <li>CRM-style systems</li>
+                <li>Workflow automation</li>
+                <li>Customer portals</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+              </div>
+              <h3>E-commerce</h3>
+              <p class="text-gray-400">AI chatbots, product assistants, order tools, dashboards, and automated customer support.</p>
+              <ul class="feature-list">
+                <li>Product recommendation bots</li>
+                <li>Order tracking tools</li>
+                <li>Refund and support flows</li>
+                <li>Store dashboards</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <h3>Service Businesses</h3>
+              <p class="text-gray-400">Booking systems, quote forms, client portals, CRM workflows, and lead management tools.</p>
+              <ul class="feature-list">
+                <li>Booking platforms</li>
+                <li>Lead capture systems</li>
+                <li>Quote request flows</li>
+                <li>Client communication tools</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Integrations Tab -->
+        <div id="integrations" class="tab-content">
+          <div class="grid grid-cols-2">
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="7" rx="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h3>Business Tools</h3>
+              <ul class="feature-list">
+                <li>Google Workspace</li>
+                <li>Microsoft 365</li>
+                <li>Slack</li>
+                <li>Notion</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18"></path>
+                  <path d="m19 9-5 5-4-4-3 3"></path>
+                </svg>
+              </div>
+              <h3>CRM & Sales</h3>
+              <ul class="feature-list">
+                <li>HubSpot</li>
+                <li>Salesforce</li>
+                <li>Zoho</li>
+                <li>Pipedrive</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+              <h3>E-commerce Platforms</h3>
+              <ul class="feature-list">
+                <li>Shopify</li>
+                <li>WooCommerce</li>
+                <li>Magento</li>
+                <li>BigCommerce</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="feature-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h3>Messaging & Support</h3>
+              <ul class="feature-list">
+                <li>WhatsApp</li>
+                <li>Facebook Messenger</li>
+                <li>Instagram</li>
+                <li>Email & live chat tools</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="card text-center">
+            <div class="feature-icon" style="margin: 0 auto 1rem auto;">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22v-5"></path>
+                <path d="M9 8V2"></path>
+                <path d="M15 8V2"></path>
+                <path d="M18 8v5a6 6 0 0 1-12 0V8Z"></path>
+              </svg>
+            </div>
+            <h3>Custom Integration</h3>
+            <p class="text-gray-400">
+              Don’t see your platform? We can create a custom connection tailored to your
+              workflow, database, website, or third-party system.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pricing Tab -->
+        <div id="pricing" class="tab-content">
+          <div class="grid grid-cols-3">
+
+            <div class="pricing-card">
+              <h3>Starter Project</h3>
+              <div class="price">From 499€</div>
+              <p class="text-gray-400">
+                Best for small tools, landing systems, simple chatbots, or prototypes.
+              </p>
+              <ul class="feature-list">
+                <li>Project consultation</li>
+                <li>Simple custom build</li>
+                <li>Basic AI or automation</li>
+                <li>Core feature setup</li>
+                <li>Launch support</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-full">
+                Start Your Project
+              </a>
+            </div>
+
+            <div class="pricing-card featured">
+              <div class="featured-tag">Popular</div>
+              <h3>Growth System</h3>
+              <div class="price">From 999€</div>
+              <p class="text-gray-400">
+                Ideal for businesses that need a complete workflow, dashboard, or AI-powered system.
+              </p>
+              <ul class="feature-list">
+                <li>Custom software development</li>
+                <li>AI chatbot or assistant</li>
+                <li>Workflow automation</li>
+                <li>Dashboard or admin panel</li>
+                <li>Third-party integrations</li>
+                <li>Testing and deployment</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-full">
+                Start Your Project
+              </a>
+            </div>
+
+            <div class="pricing-card">
+              <h3>Custom Build</h3>
+              <div class="price">Custom</div>
+              <p class="text-gray-400">
+                For larger platforms, complex systems, SaaS products, or advanced integrations.
+              </p>
+              <ul class="feature-list">
+                <li>Full custom app or platform</li>
+                <li>Advanced AI functionality</li>
+                <li>Custom database structure</li>
+                <li>Multiple user roles</li>
+                <li>Complex integrations</li>
+                <li>Ongoing support options</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-full">
+                Contact Us
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FAQ Tab -->
+        <div id="faq" class="tab-content">
+          <div class="faq-container">
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can you build my idea from scratch?</span>
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="faq-answer">
+                Yes. We can help turn your idea into a clear plan, design the structure,
+                build the system, test it, and launch it.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you only build AI chatbots?</span>
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="faq-answer">
+                No. AI chatbots are one part of what we build. We also create custom web apps,
+                dashboards, automations, portals, booking systems, CRM-style tools, and internal
+                business systems.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can you connect the software to my existing tools?</span>
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="faq-answer">
+                Yes. We can connect your system with tools such as CRMs, e-commerce platforms,
+                Google Workspace, messaging apps, databases, APIs, and other third-party services.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How long does a project take?</span>
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="faq-answer">
+                Smaller projects can usually be completed faster, while larger custom systems
+                depend on the number of features, integrations, and design requirements.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can you improve an existing system?</span>
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="faq-answer">
+                Yes. We can review your current software, improve usability, add AI features,
+                automate workflows, fix issues, or build new modules.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2>Have an idea for an app, chatbot, or custom system?</h2>
+        <p class="text-gray-400">Let’s turn it into something real.</p>
+
+        <div class="button-container">
+          <a href="/contact" class="btn btn-primary">
+            Start Your Project
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+
+          <button class="btn btn-outline" onclick="openCalendly()">
+            Book a Free Consultation
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

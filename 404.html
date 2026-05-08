@@ -14,126 +14,120 @@
     }
 
     body {
-      background: #0F0A1F;
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      overflow: hidden;
-      position: relative;
-    }
+  background: #0F0A1F;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  position: relative;
+  padding: 24px;
+}
 
-    .scanline {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 50%,
-        rgba(0, 0, 0, 0.05) 51%
-      );
-      background-size: 100% 4px;
-      pointer-events: none;
-      animation: flicker 0.15s infinite;
-    }
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: clamp(20px, 4vh, 40px);
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  max-height: 100dvh;
+}
 
-    @keyframes flicker {
-      0% { opacity: 0.97; }
-      50% { opacity: 1; }
-      100% { opacity: 0.97; }
-    }
+.sad-face {
+  font-size: clamp(60px, 16vh, 150px);
+  font-weight: 300;
+  margin-bottom: clamp(16px, 3vh, 30px);
+  display: block;
+}
 
-    .container {
-      max-width: 900px;
-      padding: 40px;
-      text-align: left;
-      position: relative;
-      z-index: 1;
-    }
+.error-title {
+  font-size: clamp(18px, 3vh, 32px);
+  font-weight: 400;
+  margin-bottom: clamp(20px, 4vh, 40px);
+  line-height: 1.35;
+}
 
-    .sad-face {
-      font-size: clamp(80px, 20vw, 180px);
-      font-weight: 300;
-      margin-bottom: 30px;
-      display: block;
-    }
+.progress-container {
+  margin-bottom: clamp(24px, 5vh, 50px);
+}
 
-    .error-title {
-      font-size: clamp(20px, 4vw, 32px);
-      font-weight: 400;
-      margin-bottom: 40px;
-      line-height: 1.4;
-    }
+.progress-text {
+  font-size: clamp(14px, 2vh, 18px);
+  margin-bottom: 10px;
+  font-weight: 300;
+}
 
-    .progress-container {
-      margin-bottom: 50px;
-    }
+.progress-percent {
+  font-size: clamp(16px, 2.5vh, 22px);
+  font-weight: 400;
+  margin-top: 15px;
+}
 
-    .progress-text {
-      font-size: clamp(14px, 2.5vw, 18px);
-      margin-bottom: 10px;
-      font-weight: 300;
-    }
+.details {
+  margin-top: clamp(24px, 5vh, 60px);
+  padding-top: clamp(16px, 3vh, 30px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
 
-    .progress-percent {
-      font-size: clamp(16px, 3vw, 22px);
-      font-weight: 400;
-      margin-top: 15px;
-    }
+.actions {
+  margin-top: clamp(20px, 4vh, 40px);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-    .details {
-      margin-top: 60px;
-      padding-top: 30px;
-      border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
+.link {
+  text-decoration: none;
+  padding: 8px 16px 6px 15px;
+  color: #ffffff;
+  font-size: clamp(16px, 2.4vh, 20px);
+  font-weight: 400;
+  display: inline-block;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
 
-    .actions {
-      margin-top: 40px;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+.link:hover,
+.link:focus {
+  background: #575463;
+  color: #0F0A1F;
+}
 
-    .link {
-      text-decoration: none;
-      padding: 8px 16px 6px 15px;
-      color: #ffffff;
-      font-size: clamp(16px, 2.5vw, 20px);
-      font-weight: 400;
-      display: inline-block;
-      transition: all 0.1s ease;
-      cursor: pointer;
-    }
+@media (max-height: 700px) {
+  .sad-face {
+    font-size: clamp(48px, 14vh, 100px);
+  }
 
-    .link:hover,
-    .link:focus {
-      background: #575463;
-      color: #0F0A1F;
-    }
+  .error-title {
+    font-size: clamp(16px, 2.6vh, 24px);
+  }
 
-    @media (max-width: 768px) {
-      body {
-        align-items: center;
-        justify-content: center;
-      }
+  .details {
+    margin-top: 20px;
+  }
 
-      .container {
-        padding: 30px 20px;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 100vh;
-      }
+  .progress-container {
+    margin-bottom: 20px;
+  }
+}
 
-      .actions {
-        margin-top: auto;
-      }
-    }
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .container {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
   </style>
 </head>
 <body>
