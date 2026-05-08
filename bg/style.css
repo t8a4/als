@@ -42,12 +42,15 @@ body {
 }
 
 .font-display {
-  font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
+  font-weight: 400;
   margin-top: 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .logo{
@@ -799,7 +802,7 @@ p {
 
 /* Hero Section (Attention) */
 .hero2 {
-    background-image: url('/als-main/assets/alstrategy-landing-wallpaper.jpg');
+    background-image: url('/assets/alstrategy-landing-wallpaper.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -828,7 +831,7 @@ p {
 }
 
 .hero2 h1 {
-    font-family: 'Clash Display', sans-serif;
+    font-family: 'Gabriela', serif;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -861,7 +864,7 @@ p {
 }
 
 .interest2 h2 {
-    font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: white;
@@ -953,7 +956,7 @@ p {
 }
 
 .benefits2 h2 {
-    font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: left;
@@ -1159,7 +1162,7 @@ p {
 }
 
 .desire2 h2 {
-    font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
@@ -1214,7 +1217,7 @@ p {
 }
 
 .cta2 h2 {
-    font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
@@ -1325,7 +1328,7 @@ p {
 }
 
 .hero4 h1 {
-    font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -1348,7 +1351,7 @@ p {
 }
 
 .section4 h2 {
-    font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
     font-size: 3rem;
     margin-bottom: 2rem;
     color: white;
@@ -1472,7 +1475,7 @@ p {
 }
 
 .cta4 h2 {
-    font-family: 'Clash Display', sans-serif;
+  font-family: 'Gabriela', serif;
     font-size: 3rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(to right, var(--color-primary-light), var(--color-primary));
