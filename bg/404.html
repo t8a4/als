@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Грешка - Страницата не беше намерена</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  background: #0F0A1F;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  position: relative;
+  padding: 24px;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: clamp(20px, 4vh, 40px);
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  max-height: 100dvh;
+}
+
+.sad-face {
+  font-size: clamp(60px, 16vh, 150px);
+  font-weight: 300;
+  margin-bottom: clamp(16px, 3vh, 30px);
+  display: block;
+}
+
+.error-title {
+  font-size: clamp(18px, 3vh, 32px);
+  font-weight: 400;
+  margin-bottom: clamp(20px, 4vh, 40px);
+  line-height: 1.35;
+}
+
+.progress-container {
+  margin-bottom: clamp(24px, 5vh, 50px);
+}
+
+.progress-text {
+  font-size: clamp(14px, 2vh, 18px);
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.progress-percent {
+  font-size: clamp(16px, 2.5vh, 22px);
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.details {
+  margin-top: clamp(24px, 5vh, 60px);
+  padding-top: clamp(16px, 3vh, 30px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.actions {
+  margin-top: clamp(20px, 4vh, 40px);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.link {
+  text-decoration: none;
+  padding: 8px 16px 6px 15px;
+  color: #ffffff;
+  font-size: clamp(16px, 2.4vh, 20px);
+  font-weight: 400;
+  display: inline-block;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+  background: #575463;
+  color: #0F0A1F;
+}
+
+@media (max-height: 700px) {
+  .sad-face {
+    font-size: clamp(48px, 14vh, 100px);
+  }
+
+  .error-title {
+    font-size: clamp(16px, 2.6vh, 24px);
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  .progress-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .container {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+  <audio id="errorSound" src="/404-sound.mp3"></audio>
+
+  <div class="container">
+    <div class="sad-face">:(</div>
+
+    <div class="error-title">
+      Опа! Страницата, която търсите, не съществува. Може да сте въвели адреса неправилно или страницата може да е била преместена.
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-text">Зарежда се информация за грешката...</div>
+      <div class="progress-percent"><span id="percent">0</span>% завършено</div>
+    </div>
+
+    <div class="details">
+      <div class="actions">
+        <a href="/" class="link">Начална страница</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let progress = 0;
+    const percentElement = document.getElementById('percent');
+    const errorSound = document.getElementById('errorSound');
+
+    window.addEventListener('load', () => {
+  document.body.addEventListener('click', () => {
+    errorSound.play();
+  }, { once: true });
+});
+
+
+    function updateProgress() {
+      if (progress < 100) {
+        progress += Math.random() * 3;
+        if (progress > 100) progress = 100;
+        percentElement.textContent = Math.floor(progress);
+
+        const delay = Math.random() * 200 + 100;
+        setTimeout(updateProgress, delay);
+      } else {
+        percentElement.textContent = '100';
+        setTimeout(() => {
+          document.querySelector('.progress-text').textContent = 'Collection complete. Waiting for user action...';
+        }, 500);
+      }
+    }
+
+    setTimeout(updateProgress, 500);
+  </script>
+</body>
+</html>
