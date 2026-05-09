@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Error - Page Not Found</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap');
 
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -14,156 +13,199 @@
     }
 
     body {
-  background: #0F0A1F;
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  min-height: 100dvh;
-  overflow: hidden;
-  position: relative;
-  padding: 24px;
-}
+      background: #0F0A1F;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow: hidden;
+      position: relative;
+      padding: 24px;
+    }
 
-.container {
-  max-width: 900px;
-  width: 100%;
-  padding: clamp(20px, 4vh, 40px);
-  text-align: left;
-  position: relative;
-  z-index: 1;
-  max-height: 100dvh;
-}
+    .scanline {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.05) 51%
+      );
+      background-size: 100% 4px;
+      pointer-events: none;
+      animation: flicker 0.15s infinite;
+    }
 
-.sad-face {
-  font-size: clamp(60px, 16vh, 150px);
-  font-weight: 300;
-  margin-bottom: clamp(16px, 3vh, 30px);
-  display: block;
-}
+    @keyframes flicker {
+      0% { opacity: 0.97; }
+      50% { opacity: 1; }
+      100% { opacity: 0.97; }
+    }
 
-.error-title {
-  font-size: clamp(18px, 3vh, 32px);
-  font-weight: 400;
-  margin-bottom: clamp(20px, 4vh, 40px);
-  line-height: 1.35;
-}
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: clamp(20px, 4vh, 40px);
+      text-align: left;
+      position: relative;
+      z-index: 1;
+      max-height: 100dvh;
+    }
 
-.progress-container {
-  margin-bottom: clamp(24px, 5vh, 50px);
-}
+    .sad-face {
+      font-size: clamp(60px, 16vh, 150px);
+      font-weight: 300;
+      margin-bottom: clamp(16px, 3vh, 30px);
+      display: block;
+    }
 
-.progress-text {
-  font-size: clamp(14px, 2vh, 18px);
-  margin-bottom: 10px;
-  font-weight: 300;
-}
+    .error-title {
+      font-size: clamp(18px, 3vh, 32px);
+      font-weight: 400;
+      margin-bottom: clamp(20px, 4vh, 40px);
+      line-height: 1.35;
+    }
 
-.progress-percent {
-  font-size: clamp(16px, 2.5vh, 22px);
-  font-weight: 400;
-  margin-top: 15px;
-}
+    .progress-container {
+      margin-bottom: clamp(24px, 5vh, 50px);
+    }
 
-.details {
-  margin-top: clamp(24px, 5vh, 60px);
-  padding-top: clamp(16px, 3vh, 30px);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
+    .progress-text {
+      font-size: clamp(14px, 2vh, 18px);
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
 
-.actions {
-  margin-top: clamp(20px, 4vh, 40px);
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+    .progress-percent {
+      font-size: clamp(16px, 2.5vh, 22px);
+      font-weight: 400;
+      margin-top: 15px;
+    }
 
-.link {
-  text-decoration: none;
-  padding: 8px 16px 6px 15px;
-  color: #ffffff;
-  font-size: clamp(16px, 2.4vh, 20px);
-  font-weight: 400;
-  display: inline-block;
-  transition: all 0.1s ease;
-  cursor: pointer;
-}
+    .details {
+      margin-top: clamp(24px, 5vh, 60px);
+      padding-top: clamp(16px, 3vh, 30px);
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
 
-.link:hover,
-.link:focus {
-  background: #575463;
-  color: #0F0A1F;
-}
+    .actions {
+      margin-top: clamp(20px, 4vh, 40px);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-@media (max-height: 700px) {
-  .sad-face {
-    font-size: clamp(48px, 14vh, 100px);
-  }
+    .link {
+      text-decoration: none;
+      padding: 8px 16px 6px 15px;
+      color: #ffffff;
+      font-size: clamp(16px, 2.4vh, 20px);
+      font-weight: 400;
+      display: inline-block;
+      transition: all 0.1s ease;
+      cursor: pointer;
+    }
 
-  .error-title {
-    font-size: clamp(16px, 2.6vh, 24px);
-  }
+    .link:hover,
+    .link:focus {
+      background: #575463;
+      color: #0F0A1F;
+    }
 
-  .details {
-    margin-top: 20px;
-  }
+    @media (max-height: 700px) {
+      .sad-face {
+        font-size: clamp(48px, 14vh, 100px);
+      }
 
-  .progress-container {
-    margin-bottom: 20px;
-  }
-}
+      .error-title {
+        font-size: clamp(16px, 2.6vh, 24px);
+      }
 
-@media (max-width: 768px) {
-  body {
-    padding: 20px;
-    overflow-y: auto;
-  }
+      .details {
+        margin-top: 20px;
+      }
 
-  .container {
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
+      .progress-container {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      .container {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="scanline"></div>
-  <audio id="errorSound" src="404-sound.mp3"></audio>
+  <audio id="errorSound" src="/404-sound.mp3"></audio>
 
   <div class="container">
     <div class="sad-face">:(</div>
 
-    <div class="error-title">
-      Oops! The page you are looking does not exist. You may have misstyped the address or the page may have been moved.
+    <div class="error-title" id="errorTitle">
+      Oops! The page you are looking for does not exist. You may have mistyped the address or the page may have been moved.
     </div>
 
     <div class="progress-container">
-      <div class="progress-text">Loading error information...</div>
-      <div class="progress-percent"><span id="percent">0</span>% complete</div>
+      <div class="progress-text" id="progressText">Loading error information...</div>
+      <div class="progress-percent">
+        <span id="percent">0</span>% <span id="completeText">complete</span>
+      </div>
     </div>
 
     <div class="details">
       <div class="actions">
-        <a href="/" class="link">Go Home</a>
+        <a href="/" class="link" id="homeLink">Go Home</a>
       </div>
     </div>
   </div>
 
   <script>
+    const isBG = window.location.pathname === '/bg' || window.location.pathname.startsWith('/bg/');
+
+    const errorTitle = document.getElementById('errorTitle');
+    const progressText = document.getElementById('progressText');
+    const completeText = document.getElementById('completeText');
+    const homeLink = document.getElementById('homeLink');
+
+    if (isBG) {
+      document.documentElement.lang = 'bg';
+      document.title = 'Грешка - Страницата не е намерена';
+
+      errorTitle.textContent =
+        'Опа! Страницата, която търсите, не съществува. Възможно е адресът да е въведен грешно или страницата да е преместена.';
+
+      progressText.textContent = 'Зареждане на информация за грешката...';
+      completeText.textContent = 'завършено';
+      homeLink.textContent = 'Към началната страница';
+      homeLink.href = '/bg/';
+    }
+
     let progress = 0;
     const percentElement = document.getElementById('percent');
     const errorSound = document.getElementById('errorSound');
 
     window.addEventListener('load', () => {
-  document.body.addEventListener('click', () => {
-    errorSound.play();
-  }, { once: true });
-});
-
+      document.body.addEventListener('click', () => {
+        if (errorSound) {
+          errorSound.play().catch(() => {});
+        }
+      }, { once: true });
+    });
 
     function updateProgress() {
       if (progress < 100) {
@@ -175,8 +217,11 @@
         setTimeout(updateProgress, delay);
       } else {
         percentElement.textContent = '100';
+
         setTimeout(() => {
-          document.querySelector('.progress-text').textContent = 'Collection complete. Waiting for user action...';
+          progressText.textContent = isBG
+            ? 'Събирането приключи. Очаква се действие от потребителя...'
+            : 'Collection complete. Waiting for user action...';
         }, 500);
       }
     }
