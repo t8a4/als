@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уеб Разработка и Дизайн | Alstrategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<div class="min-h-screen" style="padding-top: 120px;">
+  <!-- Hero Section -->
+  <section class="hero container">
+    <h1>Изградете силно онлайн присъствие с модерен уебсайт</h1>
+    <p>От изчистени бизнес сайтове и портфолиа до онлайн магазини и landing страници — създаваме бързи, красиви и функционални уебсайтове, които работят за вашия бизнес.</p>
+    <div class="button-container">
+      <a href="/bg/contact" class="btn btn-primary">
+        Заявете оферта
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+      <button class="btn btn-outline" onclick="openCalendly()">
+        Запазете разговор
+      </button>
+    </div>
+  </section>
+
+  <!-- Tabs Section -->
+  <section class="container">
+    <div class="tabs" id="tabs">
+      <button class="tab-button active" data-tab="overview">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe inline mr-2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+        Общ преглед
+      </button>
+      <button class="tab-button" data-tab="what-we-offer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers inline mr-2"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg>
+        Какво предлагаме
+      </button>
+      <button class="tab-button" data-tab="our-process">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path d="M5.83 19A10 10 0 0 1 12 2v0a10 10 0 0 1 9.2 13.5"></path><path d="M12 18V22"></path></svg>
+        Нашият процес
+      </button>
+      <button class="tab-button" data-tab="time-delivery">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        Срокове
+      </button>
+      <button class="tab-button" data-tab="hosting-security">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+        Хостинг и сигурност
+      </button>
+      <button class="tab-button" data-tab="why-choose-us">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award inline mr-2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+        Защо нас
+      </button>
+      <button class="tab-button" data-tab="pricing">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+        Цени
+      </button>
+      <button class="tab-button" data-tab="faq">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+        Въпроси
+      </button>
+    </div>
+
+    <div class="tab-contents">
+      <!-- Overview Tab -->
+      <div id="overview" class="tab-content active">
+        <div class="card">
+          <h2>Какво правим</h2>
+          <p class="text-gray-400">
+            Вашият уебсайт често е първото впечатление, което клиентите получават за бизнеса ви. Затова създаваме сайтове, които изглеждат професионално, зареждат бързо, работят удобно на всички устройства и помагат на посетителите да се превърнат в реални клиенти.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3">
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Онлайн присъствие 24/7</h3>
+            <p class="text-gray-400">Представете бизнеса си професионално и бъдете достъпни за потенциални клиенти по всяко време.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-10 20 10-7 10 7z"></path></svg>
+            </div>
+            <h3>Повече доверие</h3>
+            <p class="text-gray-400">Добре изграден сайт показва професионализъм и помага на клиентите и партньорите да ви приемат по-сериозно.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Повече запитвания и продажби</h3>
+            <p class="text-gray-400">Оптимизираме структурата, скоростта и съдържанието, за да превръща сайтът повече посетители в клиенти.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Какво ни отличава</h3>
+          <ul class="bullet-list">
+            <li>Фокус върху дизайн и функционалност: Създаваме сайтове, които изглеждат добре и работят ефективно.</li>
+            <li>SEO, бързина и mobile-first подход: Всеки сайт се изгражда с мисъл за търсачки, мобилни устройства и добро потребителско изживяване.</li>
+            <li>Интеграции без излишно усложняване: Свързваме сайта с нужните инструменти, платформи, форми, аналитики и социални канали.</li>
+            <li>Ясен процес: Работим с обратна връзка на всеки етап, за да бъде крайният резултат максимално близо до вашата визия.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- What We Offer Tab -->
+      <div id="what-we-offer" class="tab-content">
+        <div class="grid grid-cols-2">
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 w-10 h-10 text-primary mb-4"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
+            </div>
+            <h3>Бизнес уебсайтове</h3>
+            <p class="text-gray-400">Професионално онлайн присъствие за малки бизнеси, услуги, консултанти и компании с нужните страници, форми и интеграции.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            </div>
+            <h3>Портфолиа и блогове</h3>
+            <p class="text-gray-400">Елегантни и изчистени сайтове за представяне на вашата работа, експертиза, проекти или съдържание.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building w-10 h-10 text-primary mb-4"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+            </div>
+            <h3>Корпоративни сайтове</h3>
+            <p class="text-gray-400">По-структурирани сайтове за организации с повече страници, екипи, отдели, услуги, новини и специфични функционалности.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <h3>Онлайн магазини</h3>
+            <p class="text-gray-400">Функционални e-commerce сайтове с продукти, плащания, доставки, поръчки и удобен процес за покупка.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h3>Редизайн на сайт</h3>
+            <p class="text-gray-400">Обновяваме остарели сайтове с по-добър дизайн, по-ясна структура, по-добра скорост и по-удобна навигация.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+            </div>
+            <h3>Landing страници</h3>
+            <p class="text-gray-400">Едностранични сайтове за кампании, услуги, събития или продукти, създадени с фокус върху конверсии.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="feature-icon">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18.37 2.63 14 14L14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"></path><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"></path><path d="M14.5 17.5 4.5 15"></path></svg>
+          </div>
+          <h3>Допълнителни функционалности</h3>
+          <p class="text-gray-400">Форми, калкулатори, резервационни системи, CRM интеграции, форуми, клиентски зони и други функции според нуждите ви.</p>
+        </div>
+      </div>
+
+      <!-- Our Process Tab -->
+      <div id="our-process" class="tab-content">
+        <div class="process-timeline">
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
+            </div>
+            <h3>Разговор и планиране</h3>
+            <p class="text-gray-400">Определяме целите, структурата, страниците и функциите, които сайтът трябва да има.</p>
+          </div>
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <h3>Структура и посока</h3>
+            <p class="text-gray-400">Избираме подходяща структура, layout или персонализирана посока според нуждите на проекта.</p>
+          </div>
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 2.5 1 0 3.4L13 21"></path><path d="M22 21H7"></path><path d="m5 11 9 9"></path></svg>
+            </div>
+            <h3>Дизайн и разработка</h3>
+            <p class="text-gray-400">Изграждаме сайта с фокус върху визия, бързина, удобство и добро представяне на мобилни устройства.</p>
+          </div>
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3>Добавяне на съдържание</h3>
+            <p class="text-gray-400">Добавяме вашите текстове, снимки и материали или помагаме със създаването им, ако е необходимо.</p>
+          </div>
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 13l-2 2 2 2"></path><path d="m15 13 2 2-2 2"></path><line x1="12" y1="17" x2="12" y2="11"></line></svg>
+            </div>
+            <h3>SEO и интеграции</h3>
+            <p class="text-gray-400">Подготвяме сайта за индексиране, проследяване, социални мрежи, форми и нужните бизнес инструменти.</p>
+          </div>
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.7 2.84"></path><path d="M9 17h6"></path><path d="M9 12h6"></path><path d="M13 8h2"></path><line x1="22" x2="18" y1="8" y2="12"></line><line x1="18" x2="22" y1="12" y2="16"></line></svg>
+            </div>
+            <h3>Преглед и корекции</h3>
+            <p class="text-gray-400">Събираме обратна връзка, правим нужните промени и полираме сайта преди пускане.</p>
+          </div>
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <h3>Пускане и предаване</h3>
+            <p class="text-gray-400">Пускаме сайта онлайн и при нужда предоставяме кратки инструкции или обучение за работа с него.</p>
+          </div>
+          <div class="card process-card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Поддръжка</h3>
+            <p class="text-gray-400">При желание предлагаме хостинг, актуализации, поддръжка и услуги за развитие на сайта.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time & Delivery Tab -->
+      <div id="time-delivery" class="tab-content">
+        <div class="grid grid-cols-3">
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dot w-8 h-8 text-primary"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg>
+            </div>
+            <h3>Малки сайтове</h3>
+            <p class="text-gray-400">Срок: 1–3 седмици</p>
+            <p class="text-gray-400">Примери: бизнес сайтове, блогове, лични портфолиа</p>
+            <h4>Включва:</h4>
+            <ul class="bullet-list">
+              <li>Планиране на структурата</li>
+              <li>Персонализиране на дизайн или шаблон</li>
+              <li>4–6 основни страници — Начало, За нас, Услуги, Контакти и др.</li>
+              <li>Базова SEO настройка</li>
+              <li>Интеграция със социални мрежи</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dot w-8 h-8 text-primary"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg>
+            </div>
+            <h3>Средни сайтове</h3>
+            <p class="text-gray-400">Срок: 3–6 седмици</p>
+            <p class="text-gray-400">Примери: корпоративни сайтове, портали, сайтове с повече съдържание</p>
+            <h4>Включва:</h4>
+            <ul class="bullet-list">
+              <li>Персонализирани дизайн елементи</li>
+              <li>Динамично съдържание — блог, новини, FAQ</li>
+              <li>Допълнителни функции — форми, резервации, newsletter</li>
+              <li>Оптимизация на скоростта</li>
+              <li>Интеграции с допълнителни инструменти</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dot w-8 h-8 text-primary"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg>
+            </div>
+            <h3>Големи сайтове</h3>
+            <p class="text-gray-400">Срок: 6–12+ седмици</p>
+            <p class="text-gray-400">Примери: онлайн магазини, сложни сайтове и системи с много функционалности</p>
+            <h4>Включва:</h4>
+            <ul class="bullet-list">
+              <li>Сложна структура и UX/UI</li>
+              <li>Интеграции за плащания, доставки и CRM</li>
+              <li>SEO инструменти, аналитики и маркетинг системи</li>
+              <li>Персонализирани модули и многоезична поддръжка</li>
+              <li>Подробно тестване и оптимизация</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card2">
+          <h3>Срокът може да се промени според:</h3>
+          <ul class="bullet-list">
+            <li>Съдържание — проектът върви по-бързо, когато текстовете и снимките са готови навреме.</li>
+            <li>Корекции — повече промени и допълнителни ревизии могат да удължат срока.</li>
+            <li>Сложност — персонализирани функции и по-сложен дизайн изискват повече време.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hosting & Security Tab -->
+      <div id="hosting-security" class="tab-content">
+        <div class="card">
+          <h2>Надежден хостинг и вградена защита</h2>
+          <p class="text-gray-400">Всеки сайт, който изграждаме, може да бъде хостван на сигурна и бърза инфраструктура. Грижим се сайтът ви да зарежда стабилно, да бъде достъпен онлайн и да е защитен от често срещани проблеми.</p>
+        </div>
+
+        <div class="grid grid-cols-3">
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg>
+            </div>
+            <h3>Бързи и сигурни сървъри</h3>
+            <p class="text-gray-400">Стабилна работа, добра скорост и оптимизация на производителността.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+            </div>
+            <h3>SSL сертификат</h3>
+            <p class="text-gray-400">Криптирана и сигурна връзка чрез HTTPS.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+            </div>
+            <h3>Ежедневни архиви</h3>
+            <p class="text-gray-400">Автоматични backup-и, които помагат да се избегне загуба на данни.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Хостинг планове</h3>
+          <div class="grid grid-cols-3">
+            <div class="card2">
+              <h4>Basic</h4>
+              <div class="price">€5</div>
+              <p class="text-gray-400">100 GB дисково пространство</p>
+            </div>
+            <div class="card2">
+              <h4>Pro</h4>
+              <div class="price">€10</div>
+              <p class="text-gray-400">2 TB дисково пространство</p>
+            </div>
+            <div class="card2">
+              <h4>Enterprise</h4>
+              <div class="price">По запитване</div>
+              <p class="text-gray-400">Мащабируемо решение</p>
+            </div>
+          </div>
+          <p class="text-gray-400">За сайтове с голям трафик или специална инфраструктура — многоезични версии, API връзки, CRM системи или custom функционалности — можем да предложим хостинг среда според конкретните нужди.</p>
+          <p class="text-gray-400">Оставете техническата част на нас, за да се фокусирате върху развитието на бизнеса си.</p>
+        </div>
+      </div>
+
+      <!-- Why Choose Us Tab -->
+      <div id="why-choose-us" class="tab-content">
+        <div class="grid grid-cols-2">
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+            </div>
+            <h3>Създадено според вашия бизнес</h3>
+            <p class="text-gray-400">Не правим просто красив сайт — изграждаме решение според вашата аудитория, цели и начин на работа.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3>Услуга от начало до край</h3>
+            <p class="text-gray-400">От структура и дизайн до пускане, хостинг и поддръжка — можем да поемем целия процес.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3>Скорост и SEO</h3>
+            <p class="text-gray-400">Сайтовете се изграждат с мисъл за бързо зареждане, добра структура и по-добра видимост в търсачките.</p>
+          </div>
+          <div class="card">
+            <div class="feature-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+            </div>
+            <h3>Мобилен и готов за развитие</h3>
+            <p class="text-gray-400">Сайтът ви ще бъде responsive, мащабируем и подготвен за бъдещи интеграции и разширения.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Tab -->
+      <div id="pricing" class="tab-content">
+        <div class="grid grid-cols-3">
+          <div class="pricing-card">
+            <h3>Малък сайт</h3>
+            <div class="price">€50 – €250</div>
+            <p class="text-gray-400">Подходящ за малки бизнеси, услуги и лични сайтове</p>
+            <ul class="feature-list">
+              <li>4–6 страници</li>
+              <li>Мобилен responsive дизайн</li>
+              <li>Базова SEO настройка</li>
+              <li>Контактна форма</li>
+              <li>Интеграция със социални мрежи</li>
+            </ul>
+            <a href="/bg/contact" class="btn btn-primary btn-full">
+              Започнете
+            </a>
+          </div>
+          <div class="pricing-card featured">
+            <div class="featured-tag">Популярен</div>
+            <h3>Среден сайт</h3>
+            <div class="price">€250 – €1000</div>
+            <p class="text-gray-400">За развиващи се бизнеси с нужда от повече съдържание и функции</p>
+            <ul class="feature-list">
+              <li>8–12 страници</li>
+              <li>Персонализирани дизайн елементи</li>
+              <li>Разширена SEO оптимизация</li>
+              <li>Блог или новинарска секция</li>
+              <li>Newsletter интеграция</li>
+              <li>Настройка на аналитики</li>
+            </ul>
+            <a href="/bg/contact" class="btn btn-primary btn-full">
+              Започнете
+            </a>
+          </div>
+          <div class="pricing-card">
+            <h3>Голям сайт</h3>
+            <div class="price">По запитване</div>
+            <p class="text-gray-400">За по-сложни бизнес нужди, онлайн магазини и custom функционалности</p>
+            <ul class="feature-list">
+              <li>Неограничен брой страници според проекта</li>
+              <li>Персонализирана функционалност</li>
+              <li>Възможности за онлайн магазин</li>
+              <li>Разширени интеграции</li>
+              <li>Оптимизация на производителността</li>
+              <li>Премиум поддръжка</li>
+            </ul>
+            <a href="/bg/contact" class="btn btn-primary btn-full">
+              Свържете се с нас
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Tab -->
+      <div id="faq" class="tab-content">
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Създавате ли сайтове, удобни за мобилни устройства?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              Да. Всички сайтове, които изграждаме, са responsive и оптимизирани за мобилни устройства, таблети и десктоп.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Ще мога ли сам да редактирам сайта след това?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              Да. Използваме удобни решения, които позволяват да редактирате съдържание по-лесно. При нужда можем да предоставим кратко обучение.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Какво трябва да предоставя за изработката на сайта?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              Обикновено са нужни лого, снимки, текстове и информация за услугите или продуктите ви. Ако нямате готови материали, можем да помогнем с подготовката им.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Предлагате ли хостинг и поддръжка?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              Да. Предлагаме хостинг, регулярни актуализации, backup-и и поддръжка, за да работи сайтът ви стабилно.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Можете ли да обновите вече съществуващ сайт?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              Да. Можем да направим редизайн, да подобрим структурата, скоростта, функционалността и потребителското изживяване, без да губим идентичността на бранда.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Колко време отнема изработката на сайт?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              Обикновено между 1 и 12 седмици според размера, сложността, съдържанието и нужните функционалности. Вижте секцията „Срокове“ за повече детайли.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2>Готови ли сте за по-силно онлайн присъствие?</h2>
+      <div class="button-container">
+        <a href="/bg/contact" class="btn btn-primary">
+          Заявете оферта
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+        <button class="btn btn-outline" onclick="openCalendly()">
+          Запазете разговор
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
