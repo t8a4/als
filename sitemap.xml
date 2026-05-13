@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://alstrategize.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- ABOUT -->
+  <url>
+    <loc>https://alstrategize.com/about4</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/about4" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/about4" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/about4</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/about4" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/about4" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- SERVICES -->
+  <url>
+    <loc>https://alstrategize.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/services" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/services" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/services" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/services" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- CONTACT -->
+  <url>
+    <loc>https://alstrategize.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/contact" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/contact" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/contact" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/contact" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- AI -->
+  <url>
+    <loc>https://alstrategize.com/ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/ai" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/ai" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/ai" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/ai" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- MARKETING -->
+  <url>
+    <loc>https://alstrategize.com/marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/marketing" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/marketing" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/marketing" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/marketing" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- WEBSITES -->
+  <url>
+    <loc>https://alstrategize.com/websites</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/websites" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/websites" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/websites</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/websites" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/websites" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SOFTWARE DEVELOPMENT -->
+  <url>
+    <loc>https://alstrategize.com/software-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/software-development" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/software-development" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/software-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/software-development" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/software-development" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- PRIVACY POLICY -->
+  <url>
+    <loc>https://alstrategize.com/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/privacy-policy" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/privacy-policy" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- TERMS -->
+  <url>
+    <loc>https://alstrategize.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/terms" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/terms" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/terms" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/terms" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- FREE MARKETING ANALYSIS -->
+  <url>
+    <loc>https://alstrategize.com/free-marketing-analysis</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/free-marketing-analysis" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/free-marketing-analysis" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://alstrategize.com/bg/free-marketing-analysis</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alstrategize.com/free-marketing-analysis" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://alstrategize.com/bg/free-marketing-analysis" />
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
